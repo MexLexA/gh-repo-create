@@ -63,6 +63,24 @@ def _parse_num_range(s):
         return list(range(int(m.group(1)), int(m.group(2))+1))
     vals = s.split(',')
     return [int(x) for x in vals]
+
+
+_examples = '''examples:
+  # Generate curated MetFaces images without truncation (Fig.10 left)
+  python %(prog)s --outdir=out --trunc=1 --seeds=85,265,297,849 \\
+      --network=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada/pretrained/metfaces.pkl
+  # Generate uncurated MetFaces images with truncation (Fig.12 upper left)
+  python %(prog)s --outdir=out --trunc=0.7 --seeds=600-605 \\
+      --network=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada/pretrained/metfaces.pkl
+  # Generate class conditional CIFAR-10 images (Fig.17 left, Car)
+  python %(prog)s --outdir=out --trunc=1 --seeds=0-35 --class=1 \\
+      --network=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada/pretrained/cifar10.pkl
+  # Render image from projected latent vector
+  python %(prog)s --outdir=out --dlatents=out/dlatents.npz \\
+      --network=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada/pretrained/ffhq.pkl
+'''
+
+
 def main():
     parser = argparse.ArgumentParser(
         description='Generate images using pretrained network pickle.',

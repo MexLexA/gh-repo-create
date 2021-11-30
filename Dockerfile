@@ -8,6 +8,14 @@ FROM nvcr.io/nvidia/tensorflow:20.10-tf1-py3
 COPY neurological-roots-of-aesthetics-and-art /neurological-roots-of-aesthetics-and-art
 COPY raw_data/pickle.pkl /pickle.pkl
 COPY requirements.txt /requirements.txt
+COPY Makefile /Makefile
+COPY MANIFEST.in /MANIFEST.in
+COPY dnnlib /dnnlib
+COPY generator.py /generator.py
+COPY README.md /README.md
+COPY scripts /scripts
+COPY setup.py /setup.py
+COPY api.py /api.py
 
 
 RUN pip install --upgrade pip

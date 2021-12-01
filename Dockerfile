@@ -15,8 +15,9 @@ COPY generator.py /generator.py
 COPY README.md /README.md
 COPY scripts /scripts
 COPY setup.py /setup.py
-COPY fast.py /fast.py
-COPY __init__.py /__init__.py
+COPY api /workspace/api
+#COPY __init__.py /__init__
+
 # COPY api /api
 
 RUN pip install --upgrade pip
@@ -38,4 +39,4 @@ RUN pip install fastapi
 
 #CMD uvicorn api.fast:app --host 0.0.0.0
 
-CMD uvicorn fast:app --host 0.0.0.0 --port $PORT
+CMD uvicorn api.fast:app --host 0.0.0.0 --port $PORT

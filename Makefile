@@ -44,7 +44,7 @@ count_lines:
 # ----------------------------------
 #      UPLOAD PACKAGE TO PYPI
 # ----------------------------------
-PYPI_USERNAME=<AUTHOR>
+PYPI_USERNAME=<rasputin>
 build:
 	@python setup.py sdist bdist_wheel
 
@@ -53,3 +53,6 @@ pypi_test:
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
+
+run_api:
+	@uvicorn api.fast:app --reload

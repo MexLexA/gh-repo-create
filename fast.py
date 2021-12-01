@@ -19,10 +19,10 @@ def index():
     return {"greeting": "Hello world Art"}
 
 
-@app.get("/art")
-def art():
-    stream = os.popen('python generator.py generate-latent-walk --network="{explored_network}--outdir="{latent_walk_path}" --trunc=0.7 --walk-type="{walk_types[2]}" \
-       --seeds={','.join(map(str, seeds))} --frames {len(seeds)*20}')
-    output = stream.read()
-
-    print(output)
+#@app.get("/art")
+#def art():
+#    stream = os.popen('python generator.py generate-latent-walk --network="{explored_network}--outdir="{latent_walk_path}" --trunc=0.7 --walk-type="{walk_types[2]}" \
+#       --seeds={','.join(map(str, seeds))} --frames {len(seeds)*20}')
+#    output = stream.read()
+#
+#    print(output)

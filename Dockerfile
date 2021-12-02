@@ -5,19 +5,17 @@ FROM nvcr.io/nvidia/tensorflow:20.10-tf1-py3
 #ARG BASE_IMAGE=nvcr.io/nvidia/tensorflow:20.10-tf1-py3
 #FROM $BASE_IMAGE
 
-COPY neurological-roots-of-aesthetics-and-art /neurological-roots-of-aesthetics-and-art
-COPY raw_data/pickle.pkl /pickle.pkl
-COPY requirements.txt /requirements.txt
-COPY Makefile /Makefile
-COPY MANIFEST.in /MANIFEST.in
-COPY dnnlib /dnnlib
-COPY generator.py /generator.py
-COPY README.md /README.md
-COPY scripts /scripts
-COPY setup.py /setup.py
+COPY neurological-roots-of-aesthetics-and-art /workspace/neurological-roots-of-aesthetics-and-art
+COPY requirements.txt /workspace/requirements.txt
+COPY Makefile /workspace/Makefile
+COPY MANIFEST.in /workspace/MANIFEST.in
+COPY dnnlib /workspace/dnnlib
+COPY generator.py /workspace/generator.py
+COPY README.md /workspace/README.md
+COPY scripts /workspace/scripts
+COPY setup.py /workspace/setup.py
 COPY api /workspace/api
-#COPY __init__.py /__init__
-
+COPY out /workspace/out
 # COPY api /api
 
 RUN pip install --upgrade pip

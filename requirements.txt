@@ -1,29 +1,63 @@
-# packaging
-pip>=9
-setuptools>=26
-twine
-wheel>=0.29
 
-# data science
-numpy
-pandas
-scikit-learn
+#pip>=9
+#setuptools>=26
+#twine
+#wheel>=0.29
 
-# tests/linter
-black
-coverage
-flake8
-pytest
-yapf
 
-# API
-gcsfs
-google-cloud-storage
-mlflow
-s3fs
+#numpy
+#pandas
+#scikit-learn
+# tensorflow<2
+# tensorboard
+# tfutil
 
-# utilities
-six>=1.14
-joblib
-memoized-property
-termcolor
+
+
+# black
+# coverage
+# flake8
+# pytest
+# yapf
+
+
+
+# gcsfs
+# google-cloud-storage
+# mlflow
+# s3fs
+
+
+# six>=1.14
+# joblib
+# memoized-property
+# termcolor
+
+
+
+# argparse
+# os
+# pickle
+# re
+# Pillow
+# uuid
+# hashlib
+# tempfile
+# shutil
+# inspect
+# sys
+# copy
+# types
+# platform
+# logging
+# platform
+uvicorn
+fastapi
+
+scipy==1.3.3
+requests==2.22.0
+Pillow==6.2.1
+h5py==2.9.0
+imageio==2.9.0
+imageio-ffmpeg==0.4.2
+tqdm==4.49.0

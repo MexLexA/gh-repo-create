@@ -1,2 +1,17 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+# %pip install opensimplex
+# !python "{stylegan2_repo_path / 'generate.py'}" generate-images --help
+
+
+# from numpy import random
+# seed_init = random.randint(10000)
+# nbr_images = 6
+
+# generation_from = ''
+
+# !python "{stylegan2_repo_path / 'generate.py'}" generate-images \
+#     --outdir="{project_path / 'out'}" --trunc=0.7 \
+#     --seeds={seed_init}-{seed_init+nbr_images-1} --create-grid \
+#     --network={generation_from}
